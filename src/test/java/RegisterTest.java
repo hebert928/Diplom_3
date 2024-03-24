@@ -1,4 +1,4 @@
-import StellarBurgers.*;
+import stellarBurgers.*;
 import org.junit.Test;
 import org.openqa.selenium.JavascriptExecutor;
 import java.time.Duration;

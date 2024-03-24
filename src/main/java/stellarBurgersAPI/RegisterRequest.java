@@ -1,4 +1,4 @@
-package StellarBurgersAPI;
+package stellarBurgersAPI;
 
 import com.google.gson.Gson;
 

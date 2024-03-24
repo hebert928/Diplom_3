@@ -1,4 +1,4 @@
-package StellarBurgers;
+package stellarBurgers;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

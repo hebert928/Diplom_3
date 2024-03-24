@@ -1,4 +1,4 @@
-import StellarBurgers.HomePage;
+import stellarBurgers.HomePage;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.assertTrue;

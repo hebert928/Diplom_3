@@ -1,6 +1,6 @@
-import Factory.Browser;
-import StellarBurgers.*;
-import StellarBurgersAPI.RegisterRequest;
+import factory.Browser;
+import stellarBurgers.*;
+import stellarBurgersAPI.RegisterRequest;
 import io.qameta.allure.Step;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;

@@ -1,4 +1,4 @@
-package StellarBurgersAPI;
+package stellarBurgersAPI;
 
 public class RegisterResponse {
     private String accessToken;

@@ -1,5 +1,5 @@
-import StellarBurgers.*;
-import StellarBurgersAPI.*;
+import stellarBurgers.*;
+import stellarBurgersAPI.*;
 import io.restassured.response.Response;
 import org.junit.After;
 import org.junit.Before;

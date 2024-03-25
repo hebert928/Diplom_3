@@ -4,7 +4,6 @@ import io.restassured.response.Response;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import java.time.Duration;
 import static org.junit.Assert.assertTrue;
 
 public class AccountTest extends BaseTest{
@@ -26,9 +25,6 @@ public class AccountTest extends BaseTest{
 
     @Test
     public void checkGoToAccountPageByProfileButtonOnHomePage() {
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-
         userLogin(email, password);
         objHomePage.clickProfileButton();
         boolean actual = objAccountPage.checkLogoutButtonEnabled();
@@ -38,9 +34,6 @@ public class AccountTest extends BaseTest{
 
     @Test
     public void checkGoToConstructorFromAccountPageByConstructorButton() {
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-
         userLogin(email, password);
         objHomePage.clickProfileButton();
         objAccountPage.clickConstructorButton();
@@ -51,9 +44,6 @@ public class AccountTest extends BaseTest{
 
     @Test
     public void checkGoToConstructorFromAccountPageByStellarLogo() {
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-
         userLogin(email, password);
         objHomePage.clickProfileButton();
         objAccountPage.clickLogoStellar();
@@ -64,8 +54,6 @@ public class AccountTest extends BaseTest{
 
     @Test
     public void checkLogoutFromAccount() {
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         LoginPage objloginPage = new LoginPage(driver);
 
         userLogin(email, password);

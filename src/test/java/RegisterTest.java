@@ -8,8 +8,6 @@ public class RegisterTest extends BaseTest{
 
     @Test
     public void checkUserSignUpSuccess() {
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(50));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
         HomePage objHomePage = new HomePage(driver);
         AccountPage objAccountPage = new AccountPage(driver);
 

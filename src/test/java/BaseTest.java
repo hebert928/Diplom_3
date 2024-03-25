@@ -7,6 +7,9 @@ import io.restassured.response.Response;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
+
+import java.time.Duration;
+
 import static io.restassured.RestAssured.given;
 
 public class BaseTest {
@@ -19,6 +22,8 @@ public class BaseTest {
     public void init() {
         driver = new Browser().getWebDriver("yandex");
         RestAssured.baseURI = "https://stellarburgers.nomoreparties.site/";
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
     }
 
     @Step

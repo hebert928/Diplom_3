@@ -4,7 +4,6 @@ import io.restassured.response.Response;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import java.time.Duration;
 import static org.junit.Assert.assertTrue;
 
 public class LoginTest extends BaseTest{
@@ -26,9 +25,6 @@ public class LoginTest extends BaseTest{
 
     @Test
     public void checkLoginBySignInButtonOnHomePage()  {
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-
         objHomePage.getPage();
         objHomePage.clickSignInButton();
         userLogin(email, password);
@@ -40,9 +36,6 @@ public class LoginTest extends BaseTest{
 
     @Test
     public void checkLoginByProfileButtonOnHomePage() {
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-
         objHomePage.getPage();
         objHomePage.clickProfileButton();
         userLogin(email, password);
@@ -54,8 +47,6 @@ public class LoginTest extends BaseTest{
 
     @Test
     public void checkLoginBySignInButtonOnRegisterPage() {
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         LoginPage objLoginPage = new LoginPage(driver);
         RegisterPage objRegisterPage = new RegisterPage(driver);
 
@@ -72,8 +63,6 @@ public class LoginTest extends BaseTest{
 
     @Test
     public void checkLoginBySignInButtonOnForgotPasswordPage() {
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         LoginPage objLoginPage = new LoginPage(driver);
         ForgotPasswordPage objForgotPasswordPage = new ForgotPasswordPage(driver);
 

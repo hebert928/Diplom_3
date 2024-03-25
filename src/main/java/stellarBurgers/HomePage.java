@@ -11,12 +11,8 @@ public class HomePage {
     private By bunButton = By.xpath(".//span[@class='text text_type_main-default' and text()='Булки']");
     private By sauceButton = By.xpath(".//span[@class='text text_type_main-default' and text()='Соусы']");
     private By mainButton = By.xpath(".//span[@class='text text_type_main-default' and text()='Начинки']");
-    private By bunCard = By.xpath(".//img[@alt='Краторная булка N-200i']");
-    private By bunIngredientDetailsPopUp = By.xpath(".//p[@class='text text_type_main-medium mb-8' and text()='Краторная булка N-200i']");
-    private By sauceCard = By.xpath(".//img[@alt='Соус с шипами Антарианского плоскоходца']");
-    private By sauceIngredientDetailsPopUp = By.xpath(".//p[@class='text text_type_main-medium mb-8' and text()='Соус с шипами Антарианского плоскоходца']");
-    private By mainCard = By.xpath(".//img[@alt='Филе Люминесцентного тетраодонтимформа']");
-    private By mainIngredientDetailsPopUp = By.xpath(".//p[@class='text text_type_main-medium mb-8' and text()='Филе Люминесцентного тетраодонтимформа']");
+    private By activeConstructorTab = By.className("tab_tab_type_current__2BEPc");
+
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -34,10 +30,6 @@ public class HomePage {
         driver.findElement(signInButton).click();
     }
 
-    public void clickBunButton() {
-        driver.findElement(bunButton).click();
-    }
-
     public void clickSauceButton() {
         driver.findElement(sauceButton).click();
     }
@@ -46,31 +38,11 @@ public class HomePage {
         driver.findElement(mainButton).click();
     }
 
-    public void clickBunCard() {
-        driver.findElement(bunCard).click();
-    }
-
-    public void clickSauceCard() {
-        driver.findElement(sauceCard).click();
-    }
-
-    public void clickMainCard() {
-        driver.findElement(mainCard).click();
-    }
-
     public boolean checkBunButtonEnabled() {
         return driver.findElement(bunButton).isEnabled();
     }
 
-    public boolean checkBunPopUpEnabled() {
-        return driver.findElement(bunIngredientDetailsPopUp).isEnabled();
-    }
-
-    public boolean checkSaucePopUpEnabled() {
-        return driver.findElement(sauceIngredientDetailsPopUp).isEnabled();
-    }
-
-    public boolean checkMainPopUpEnabled() {
-        return driver.findElement(mainIngredientDetailsPopUp).isEnabled();
+    public boolean checkConstructorTabIsActive(String constructorTabName) {
+        return driver.findElement(activeConstructorTab).getText().toString().equals(constructorTabName);
     }
 }
